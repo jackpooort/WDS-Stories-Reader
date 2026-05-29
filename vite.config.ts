@@ -4,7 +4,7 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/WDS-Stories-Reader/',
   plugins: [vue(), VitePWA({
     registerType: 'autoUpdate'
   })],
@@ -12,6 +12,7 @@ export default defineConfig({
     target: 'esnext',
     outDir: 'dist',
     assetsDir: 'assets',
+    
     chunkSizeWarningLimit: 1500
   }
 })

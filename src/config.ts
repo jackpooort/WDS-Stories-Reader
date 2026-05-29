@@ -3,8 +3,16 @@ export const COMIC_MASTER_URL = 'https://raw.githubusercontent.com/wds-sirius/Ad
 
 export const EPISODE_DATA_URL = 'https://raw.githubusercontent.com/wds-sirius/Adv-Resource/main'
 
-export function getEpisodeDataUrl(episodeId : number) {
-    return `${EPISODE_DATA_URL}/episode/${episodeId}.json`
+#Русский_перевод
+const TRANSLATION_BASE = '/translations/ru';
+
+export function getEpisodeDataUrl(episodeId: number) {
+    const ruUrl = `${TRANSLATION_BASE}/episode/${episodeId}.json`;
+    if (episodeId === 1000000 || episodeId === 1000001) {
+        return ruUrl;
+    }
+    
+    return `${EPISODE_DATA_URL}/episode/${episodeId}.json`;
 }
 
 export function getEpisodeVoiceDataUrl(episodeId : number){
